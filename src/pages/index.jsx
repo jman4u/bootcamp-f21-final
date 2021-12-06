@@ -1,3 +1,3 @@
-import IndexPage from "../screens/Index";
+import HomePage from "../screens/Home/AboutPage";
 
-export default IndexPage;
+export default HomePage;
