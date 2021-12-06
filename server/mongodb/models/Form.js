@@ -21,4 +21,4 @@ const FormSchema = new Schema({
   },
 });
 
-export default mongoose.models.Form ?? mongoose.model("Cat", FormSchema);
+export default mongoose.models.Form ?? mongoose.model("Form", FormSchema);
