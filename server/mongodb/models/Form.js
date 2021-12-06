@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 
 const { Schema } = mongoose;
@@ -18,6 +19,15 @@ const FormSchema = new Schema({
   phone: {
     type: String,
     required: true,
+  },
+  cat: {
+    type: String,
+    required: true,
+  },
+  isApproved: {
+    type: Boolean,
+    required: false,
+    default: false,
   },
 });
 
