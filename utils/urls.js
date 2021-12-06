@@ -18,6 +18,8 @@ export default {
       login: "/api/user/login",
       logout: "/api/user/logout",
       getCurrent: "/api/user/get-current",
+      adopt: "/api/adopt",
+      adoption: "/api/adoption",
     },
   },
 };
