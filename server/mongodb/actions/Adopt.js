@@ -3,7 +3,7 @@ import Cat from "../models/Cat";
 
 export async function getCats() {
   await mongo();
-  const cats = Cat.find();
+  const cats = await Cat.find();
   if (cats !== null) {
     return cats;
   } else {
@@ -13,7 +13,7 @@ export async function getCats() {
 
 export async function findAdoptableCats() {
   await mongo();
-  const adoptable = Cat.find({ isAdopted: { $eq: true } });
+  const adoptable = await Cat.find({ isAdopted: { $eq: true } });
   if (adoptable !== null) {
     return adoptable;
   } else {
@@ -21,7 +21,7 @@ export async function findAdoptableCats() {
   }
 }
 
-export const getCat = async (id) => {
+export async function getCat(id) {
   if (!id) {
     throw new Error("no cat id");
   }
@@ -34,4 +34,4 @@ export const getCat = async (id) => {
   } else {
     throw new Error("No cat found");
   }
-};
+}

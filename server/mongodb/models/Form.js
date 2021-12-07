@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb";
+import { ObjectID } from "mongodb/node_modules/bson";
 import mongoose from "mongoose";
 
 const { Schema } = mongoose;
@@ -17,6 +19,19 @@ const FormSchema = new Schema({
   },
   phone: {
     type: String,
+    required: true,
+  },
+  cat: {
+    type: String,
+    required: true,
+  },
+  isApproved: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+  id: {
+    type: ObjectID,
     required: true,
   },
 });
