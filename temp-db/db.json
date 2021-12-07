@@ -1,0 +1,10 @@
+{
+    "cats": [
+      {"id": "1","name": "Cecil", "species": "cat", "email":"abc@xyz.com", "phone": "123-456-7890"},
+      {"id": "2","name": "Cecil", "species": "cat", "email":"abc@xyz.com", "phone": "123-456-7890"},
+      {"id": "3","name": "Cecil", "species": "cat", "email":"abc@xyz.com", "phone": "123-456-7890"},
+      {"id": "4","name": "Cecil", "species": "cat", "email":"abc@xyz.com", "phone": "123-456-7890"},
+      {"id": "5","name": "Cecil", "species": "cat", "email":"abc@xyz.com", "phone": "123-456-7890"},
+      {"id": "6","name": "Cecil", "species": "cat", "email":"abc@xyz.com", "phone": "123-456-7890"}
+    ]
+  }
