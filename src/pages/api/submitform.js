@@ -1,4 +1,4 @@
-import { submit } from "../../../../server/mongodb/actions/Forms";
+import { submit } from "../../../../server/mongodb/actions/Form";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {

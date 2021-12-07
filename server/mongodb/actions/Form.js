@@ -45,17 +45,20 @@ export async function getFormsForCat(name) {
 //submit application
 export async function submit(application) {
   await mongo();
-  const newApplication = await new Form(application);
-  await newApplication.save(function (err) {
+  const newForm = await new Form(application);
+  await newForm.save(function (err) {
     if (err) {
       throw new Error(err);
     }
   });
-  return newApplication;
+  return newForm;
 }
 
 //set approved for admin
-export async function setApproved() {
-
+export async function setApproved(id) {
+  if (!id) {
+    throw new Error("No ID");
+  }
+  await mongo();
+  await Form.find({ _id: id });
 }
-

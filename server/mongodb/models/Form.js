@@ -1,4 +1,5 @@
 import { ObjectId } from "mongodb";
+import { ObjectID } from "mongodb/node_modules/bson";
 import mongoose from "mongoose";
 
 const { Schema } = mongoose;
@@ -28,6 +29,10 @@ const FormSchema = new Schema({
     type: Boolean,
     required: false,
     default: false,
+  },
+  id: {
+    type: ObjectID,
+    required: true,
   },
 });
 
