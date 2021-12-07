@@ -9,5 +9,4 @@ export async function getForms() {
   } else {
     throw new Error("No forms found");
   }
-};
-
+}
