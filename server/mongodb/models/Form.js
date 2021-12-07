@@ -4,36 +4,36 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const FormSchema = new Schema({
-  name: {
-    type: String,
-    required: true,
+const FormSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: String,
+      required: true,
+    },
+    cat: {
+      type: String,
+      required: true,
+    },
+    isApproved: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
-  location: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-  },
-  phone: {
-    type: String,
-    required: true,
-  },
-  cat: {
-    type: String,
-    required: true,
-  },
-  isApproved: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
-  id: {
-    type: ObjectID,
-    required: true,
-  },
-});
+  { collection: "forms" }
+);
 
-export default mongoose.models.Form ?? mongoose.model("Form", FormSchema);
+export default (mongoose.models && mongoose.models.Form) ||
+  mongoose.model("Form", FormSchema);

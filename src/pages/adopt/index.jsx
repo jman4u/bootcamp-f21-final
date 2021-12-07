@@ -1,19 +1,30 @@
-import { getCats } from "../../../server/mongodb/actions/Adopt";
 import React from "react";
+import Link from "next/link";
+import AnimalCard from "../../components/AnimalCard/AnimalCard";
+import { getCats } from "../../../server/mongodb/actions/Adopt";
 
-export default function Adopt() {
-  //   const getCatData = async () => {
-  //     const res = await getCats();
-  //     const data = await res.json();
-
-  //     return data;
-  //   };
-
-  const data = getCats().then((r) => console.log(r));
-
+const AdoptPage = ({ cats }) => {
   return (
     <div>
-      <h1>Adopt page</h1>
+      <h1>Adopt Page</h1>
+      {cats &&
+        cats.length > 0 &&
+        cats.map((cat) => (
+          <Link href={"/cats/" + cat._id} key={cat._id}>
+            <AnimalCard key={cat._id} cat={cat} />
+          </Link>
+        ))}
     </div>
   );
+};
+
+export async function getServerSideProps(context) {
+  const data = await getCats();
+  return {
+    props: {
+      cats: data,
+    },
+  };
 }
+
+export default AdoptPage;

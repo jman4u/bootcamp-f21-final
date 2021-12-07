@@ -1,3 +1,24 @@
 .container {
-    border: 1px solid black;
+  border: 1px solid black;
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  margin: 10px;
+  background-color: #ddd;
+}
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+.breed {
+  font-size: 18px;
+  justify-self: center;
+}
+.img {
+  float: right;
+}
+.textContent {
+  float: left;
+  margin: 20px;
 }

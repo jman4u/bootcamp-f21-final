@@ -32,7 +32,6 @@ export async function getFormsForCat(name) {
     throw new Error("no cat name");
   }
   await mongo();
-
   const forms = await Form.find({ cat: name });
 
   if (forms !== null) {

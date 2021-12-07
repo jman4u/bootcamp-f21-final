@@ -15,38 +15,39 @@ const handler = (req, res) => {
         success: false,
         message: "No valid ID",
       });
-    }
-    else if (!id) {
-        getFormsForCat(cat)
-        .then((text) => {
-            return res.status(200).json({
-                success: true,
-                payload: text,
-            }).catch ((err) => {
-                return res.status(400).json({
-                success: false,
-                message: err.message
-                })
-            })
-        }
-    } else {
-        getForm(id)
-        .then((text) => {
-            return res.status(200).json({
-                success: true,
-                payload: text,
-            })
-        }).catch(err) => {
+    } else if (!id) {
+      getFormsForCat(cat).then((text) => {
+        return res
+          .status(200)
+          .json({
+            success: true,
+            payload: text,
+          })
+          .catch((err) => {
             return res.status(400).json({
-                success: false,
-                messsage: err.message,
-            })
-        }
+              success: false,
+              message: err.message,
+            });
+          });
+      });
+    } else {
+      getForm(id)
+        .then((text) => {
+          return res.status(200).json({
+            success: true,
+            payload: text,
+          });
+        })
+        .catch((err) => {
+          return res.status(400).json({
+            success: false,
+            messsage: err.message,
+          });
+        });
     }
   }
   //make elif for req.method equals PUT
   //and update form to be approved using setAprroved
   //but also check if id is not null
-
 };
 export default handler;

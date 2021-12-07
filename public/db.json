@@ -1,0 +1,58 @@
+{
+    "cats": [
+        {
+            "id": 1,
+            "name": "Cecil",
+            "image": "https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg",
+            "age": 3,
+            "location": "Grand Rapids, MI",
+            "breed": "Tabby",
+            "isAdopted": false
+        },
+        {
+            "id": 2,
+            "name": "Matthew",
+            "image": "https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg",
+            "age": 3,
+            "location": "Grand Rapids, MI",
+            "breed": "Tabby",
+            "isAdopted": false
+        },
+        {
+            "id": 3,
+            "name": "Julia",
+            "image": "https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg",
+            "age": 3,
+            "location": "Grand Rapids, MI",
+            "breed": "Tabby",
+            "isAdopted": false
+        },
+        {
+            "id": 4,
+            "name": "Audrey",
+            "image": "https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg",
+            "age": 3,
+            "location": "Grand Rapids, MI",
+            "breed": "Tabby",
+            "isAdopted": false
+        },
+        {
+            "id": 5,
+            "name": "Josephine",
+            "image": "https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg",
+            "age": 3,
+            "location": "Grand Rapids, MI",
+            "breed": "Tabby",
+            "isAdopted": false
+        },
+        {
+            "id": 6,
+            "name": "Spotty",
+            "image": "https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg",
+            "age": 3,
+            "location": "Grand Rapids, MI",
+            "breed": "Tabby",
+            "isAdopted": false
+        }
+    ]
+}

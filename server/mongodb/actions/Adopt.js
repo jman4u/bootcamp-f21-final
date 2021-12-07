@@ -3,9 +3,9 @@ import Cat from "../models/Cat";
 
 export async function getCats() {
   await mongo();
-  const cats = await Cat.find();
+  const cats = await Cat.find({}).lean();
   if (cats !== null) {
-    return cats;
+    return JSON.parse(JSON.stringify(cats));
   } else {
     throw new Error("No cats found");
   }
@@ -27,10 +27,10 @@ export async function getCat(id) {
   }
   await mongo();
 
-  const cat = await Cat.find({ _id: id });
+  const cat = await Cat.findOne({ _id: id }).lean();
 
   if (cat !== null) {
-    return cat;
+    return JSON.parse(JSON.stringify(cat));
   } else {
     throw new Error("No cat found");
   }
