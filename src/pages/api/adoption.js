@@ -44,5 +44,9 @@ const handler = (req, res) => {
         }
     }
   }
+  //make elif for req.method equals PUT
+  //and update form to be approved using setAprroved
+  //but also check if id is not null
+
 };
 export default handler;
